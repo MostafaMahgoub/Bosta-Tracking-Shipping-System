@@ -7,10 +7,11 @@ import ProgressBar from './Components/ProgressBar';
 
 function ShippingProgress() {
   const { data } = useContext(AppContext);
+  
 
   return (
     <Card className="my-10 w-80vw flex flex-col">
-      {data ? (
+      {data && data.TrackingNumber ? (
         <>
           <div className="flex flex-col sm:flex-row items-start sm:items-center content-center justify-around">
             <div className="flex flex-col items-start content-center gap-0">
@@ -34,7 +35,7 @@ function ShippingProgress() {
           <ProgressBar />
         </>
       ) : (
-        <Empty description={<span>No shipment data found. Please enter the tracking number.</span>} />
+        <Empty description={<span className='font-bold text-lg'>No shipment data found. Please enter the tracking number.</span>} />
       )}
     </Card>
   );

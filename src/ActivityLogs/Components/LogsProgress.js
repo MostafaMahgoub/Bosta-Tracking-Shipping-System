@@ -11,7 +11,6 @@ function LogsProgress() {
       progressDot
       className="items-start flex-col w-70vw"
       direction="vertical"
-      size="small"
       current={currentStep}
       items={[
         {
