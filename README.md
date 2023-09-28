@@ -13,6 +13,7 @@ The Bosta Tracking Shipping System is a web application that allows users to tra
 
 ### Prerequisites
 
+- TailwindCSS
 - Node.js (version 12 or higher)
 - npm (version 6 or higher)
 
