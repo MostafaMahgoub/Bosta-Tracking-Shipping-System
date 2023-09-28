@@ -1,5 +1,6 @@
 import React from "react";
 import { Steps } from "antd";
+import LogsCard from "./LogsCard";
 
 
 function LogsProgress() {
@@ -15,6 +16,7 @@ function LogsProgress() {
       items={[
         {
           title: <span className="ActivityLogHeader">Your order is created</span>,
+          description: <><LogsCard /><LogsCard /><LogsCard /></>
         },
         {
           title: <span className="ActivityLogHeader">Your order is created</span>,
