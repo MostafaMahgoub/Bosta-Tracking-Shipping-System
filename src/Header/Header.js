@@ -12,7 +12,7 @@ function HeaderElement(){
     
     return (
         <>
-        <header className='flex flex-row pt-8 px-40 items-center'>
+        <header className='flex flex-col gap-5 sm:gap-0 sm:flex-row pt-8 px-40 items-center'>
             {language === 'en' ? <BostaEnglish /> : <BostaArabic />}
             <div className='flex-grow' />
             <div className='flex flex-row gap-5'>
