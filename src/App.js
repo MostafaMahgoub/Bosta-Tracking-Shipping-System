@@ -1,9 +1,13 @@
+import React from 'react';
+import { AppProvider } from './AppContext';
 
 function App() {
   return (
-    <div>
-     test
-    </div>
+    <AppProvider>
+      <div>
+        test
+      </div>
+    </AppProvider>
   );
 }
 
