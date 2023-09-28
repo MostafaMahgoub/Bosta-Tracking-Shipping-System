@@ -15,6 +15,18 @@ code {
     monospace;
 }
 
+button.ant-btn.css-dev-only-do-not-override-pr0fja.ant-btn-primary.ant-input-search-button {
+  background: #e30613;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-input-search .ant-input:focus {
+  border-color: #e30613;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-input-search .ant-input:hover, :where(.css-dev-only-do-not-override-pr0fja).ant-input-search .ant-input:focus {
+  border-color: #e30613;
+}
+
 .rtl {
   direction: rtl;
 }

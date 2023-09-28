@@ -7,8 +7,8 @@ export const AppProvider = ({ children }) => {
   const [trackingNumber, setTrackingNumber] = useState('');
   const [data, setData] = useState(null);
 
-  const toggleLanguage = () => {
-    setLanguage(prevLanguage => (prevLanguage === 'en' ? 'ar' : 'en'));
+  const toggleLanguage = (Lang) => {
+    setLanguage(Lang);
   };
 
   const fetchData = useCallback(async () => {
