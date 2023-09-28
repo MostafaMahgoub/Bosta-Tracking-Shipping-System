@@ -6,11 +6,13 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        cairo: ['cairo', 'sans-serif'],
       },
       width: {
         '80vw': '80vw',
+        '70vw': '70vw',
       },
-      
+    
     },
   },
   plugins: [],

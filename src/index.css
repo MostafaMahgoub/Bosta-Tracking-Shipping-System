@@ -1,6 +1,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .ActivityLogHeader {
+    @apply font-cairo font-bold text-black;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -46,9 +52,10 @@ span.anticon.anticon-check.ant-steps-finish-icon {
   border-color: #e30613;
 }
 
-:where(.css-dev-only-do-not-override-pr0fja)[class^="ant-steps"] [class^="ant-steps"], :where(.css-dev-only-do-not-override-pr0fja)[class*=" ant-steps"] [class^="ant-steps"], :where(.css-dev-only-do-not-override-pr0fja)[class^="ant-steps"] [class*=" ant-steps"], :where(.css-dev-only-do-not-override-pr0fja)[class*=" ant-steps"] [class*=" ant-steps"] {
-  box-sizing: unset;
+:where(.css-dev-only-do-not-override-pr0fja).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after {
+  background-color: #ff1616;
 }
+
 
 .rtl {
   direction: rtl;

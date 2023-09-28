@@ -10,7 +10,7 @@ function ProgressBar() {
 
   return (
     <Steps
-      className="items-center"
+      className="items-start sm:items-center flex-col sm:flex-row"
       size="small"
       current={currentStep}
       items={[
@@ -26,7 +26,7 @@ function ProgressBar() {
         },
         {
           title: "Delivered",
-          icon: currentStep >= 2 ? <RedDelivered width={25} height={25} /> : <Delivered  width={25} height={25} />,
+          icon: currentStep >= 3 ? <RedDelivered width={25} height={25} /> : <Delivered  width={25} height={25} />,
         },
       ]}
     />
