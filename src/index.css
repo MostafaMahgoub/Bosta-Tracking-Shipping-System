@@ -23,8 +23,31 @@ button.ant-btn.css-dev-only-do-not-override-pr0fja.ant-btn-primary.ant-input-sea
   border-color: #e30613;
 }
 
+:where(.css-dev-only-do-not-override-pr0fja).ant-steps .ant-steps-item-process .ant-steps-item-icon {
+  background-color: #e30613;
+  border-color: #e30613;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-steps .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: #ffe6e6;
+  border-color: #ffe6e6;
+}
+
+span.anticon.anticon-check.ant-steps-finish-icon {
+  color: red;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after {
+  background-color: #ff1616;
+}
+
+
 :where(.css-dev-only-do-not-override-pr0fja).ant-input-search .ant-input:hover, :where(.css-dev-only-do-not-override-pr0fja).ant-input-search .ant-input:focus {
   border-color: #e30613;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja)[class^="ant-steps"] [class^="ant-steps"], :where(.css-dev-only-do-not-override-pr0fja)[class*=" ant-steps"] [class^="ant-steps"], :where(.css-dev-only-do-not-override-pr0fja)[class^="ant-steps"] [class*=" ant-steps"], :where(.css-dev-only-do-not-override-pr0fja)[class*=" ant-steps"] [class*=" ant-steps"] {
+  box-sizing: unset;
 }
 
 .rtl {

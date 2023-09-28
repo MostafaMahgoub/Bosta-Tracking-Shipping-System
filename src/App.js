@@ -18,7 +18,7 @@ function Content() {
   return (
     <div className={`${language === 'en' ? 'ltr' : 'rtl'}`}>
       <HeaderElement />
-    <div className="flex sm:flex-col flex-row">
+    <div className="flex justify-center items-center flex-col">
       <ShippingProgress />
       <ActivityLogs />
     </div>
