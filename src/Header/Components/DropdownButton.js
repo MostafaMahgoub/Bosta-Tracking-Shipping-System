@@ -11,6 +11,7 @@ function DropdownButton() {
 
   const handleSearch = () => {
     setTrackingNumber(inputText);
+    setInputText('');
   };
 
   const menu = (
@@ -20,6 +21,7 @@ function DropdownButton() {
         enterButton
         onSearch={handleSearch}
         onChange={(e) => setInputText(e.target.value)}
+        value={inputText}
       />
     </div>
   );
