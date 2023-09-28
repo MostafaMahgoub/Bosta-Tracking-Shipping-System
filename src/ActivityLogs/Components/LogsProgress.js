@@ -17,14 +17,14 @@ function LogsProgress() {
           title: <span className="ActivityLogHeader">Your order is created</span>,
         },
         {
-          title: "Shipment received",
+          title: <span className="ActivityLogHeader">Your order is created</span>,
         },
         {
-          title: "Order is out for delivery",
+          title: <span className="ActivityLogHeader">Your order is created</span>,
           
         },
         {
-          title: "Delivered",
+          title: <span className="ActivityLogHeader">Your order is created</span>,
          
         },
       ]}

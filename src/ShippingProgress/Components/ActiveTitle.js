@@ -2,7 +2,7 @@
 
 function ActiveTitle({title}) {
     return(
-        <span className="text-[#667085] font-poppins">{title}</span>
+        <span className="text-[#667085]">{title}</span>
     )
 }
 

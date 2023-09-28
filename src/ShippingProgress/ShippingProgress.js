@@ -15,26 +15,26 @@ function ShippingProgress() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center content-center justify-around">
             <div className="flex flex-col items-start content-center gap-0">
               <ActiveTitle title={`Shipment No. ${data.TrackingNumber}`} />
-              <h4 className="font-poppins">{`${data.CurrentStatus.state}`}</h4>
+              <h4>{`${data.CurrentStatus.state}`}</h4>
             </div>
             <div className="flex flex-col items-start content-center gap-0">
               <ActiveTitle title={'Last update'} />
-              <h4 className="font-poppins">{`${data.CurrentStatus.state}`}</h4>
+              <h4>{`${data.CurrentStatus.state}`}</h4>
             </div>
             <div className="flex flex-col items-start content-center gap-0">
               <ActiveTitle title={'Provider'} />
-              <h4 className="font-poppins">{`${data.CurrentStatus.state}`}</h4>
+              <h4>{`${data.CurrentStatus.state}`}</h4>
             </div>
             <div className="flex flex-col items-start content-center gap-0">
               <ActiveTitle title={'Promised date'} />
-              <h4 className="font-poppins">{`${data.CurrentStatus.state}`}</h4>
+              <h4>{`${data.CurrentStatus.state}`}</h4>
             </div>
           </div>
           <Divider />
           <ProgressBar />
         </>
       ) : (
-        <Empty description={<span className='font-poppins'>No shipment data found. Please enter the tracking number.</span>} />
+        <Empty description={<span>No shipment data found. Please enter the tracking number.</span>} />
       )}
     </Card>
   );

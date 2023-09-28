@@ -31,7 +31,7 @@ function LangButton() {
     <Dropdown className='self-center' menu={{ items }}>
       <a onClick={(e) => e.preventDefault()}>
         <Space>
-          <span className="text-[#e30613] text-lg font-poppins font-medium leading-6 break-words">{language === 'en' ? "ENG" : "AR"}</span>
+          <span className="text-[#e30613] text-lg font-medium leading-6 break-words">{language === 'en' ? "ENG" : "AR"}</span>
           <DownOutlined className='text-[#e30613]'/>
         </Space>
       </a>

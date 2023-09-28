@@ -27,7 +27,7 @@ function DropdownButton() {
   return (
     <Dropdown overlay={menu} trigger={['hover']}>
       <a className="ant-dropdown-link flex ... gap-3" onClick={(e) => e.preventDefault()}>
-        <span className="text-[#e30613] text-lg font-poppins font-medium leading-6 break-words">Tracking shipments</span>
+        <span className="text-[#e30613] text-lg font-medium leading-6 break-words">Tracking shipments</span>
         <DownOutlined className='text-[#e30613]' />
       </a>
     </Dropdown>
