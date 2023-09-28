@@ -1,5 +1,6 @@
 {
-    "translation": {
-      "greeting": "Hello"
-    }
+    
+      "Tracking shipments": "Tracking shipments",
+      "Put Tracking No." : "Put Tracking No.",
+      "AR" : "AR"
   }

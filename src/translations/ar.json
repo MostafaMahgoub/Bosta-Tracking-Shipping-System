@@ -1,5 +1,7 @@
 {
-    "translation": {
-      "greeting": "مرحبًا"
-    }
+  
+      "Tracking shipments": "تتبع الشحنه",
+      "Put Tracking No." : "رقم التتبع",
+      "AR" : "عربي"
+    
   }

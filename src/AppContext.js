@@ -1,8 +1,11 @@
 import React, { createContext, useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n from './i18n';
 
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
+  const { t } = useTranslation();
   const [language, setLanguage] = useState('en');
   const [trackingNumber, setTrackingNumber] = useState('');
   const [data, setData] = useState(null);
@@ -27,6 +30,9 @@ export const AppProvider = ({ children }) => {
       fetchData();
     }
   }, [trackingNumber, fetchData]);
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language]);
 
   const contextValue = {
     language,
@@ -34,6 +40,7 @@ export const AppProvider = ({ children }) => {
     trackingNumber,
     setTrackingNumber,
     data,
+    t
   };
 
   return (
