@@ -2,13 +2,6 @@
 
 The Bosta Tracking Shipping System is a web application that allows users to track and manage shipments in real-time. It provides a user-friendly interface for creating, updating, and canceling orders, as well as generating shipping labels and invoices. The system also sends notifications to keep users informed about shipment status changes.
 
-## Features
-
-- Real-time tracking: Track the status and location of shipments in real-time.
-- Shipment management: Create, update, and cancel orders.
-- Label and invoice generation: Generate shipping labels and invoices.
-- Notifications: Receive notifications for shipment status changes.
-
 ## Technologies Used
 
 - React: A JavaScript library for building user interfaces.
