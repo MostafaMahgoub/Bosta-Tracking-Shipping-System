@@ -1,6 +1,6 @@
 # Bosta Tracking Shipping System
 
-The Bosta Tracking Shipping System is a web application that allows users to track and manage shipments in real-time. It provides a user-friendly interface for creating, updating, and canceling orders, as well as generating shipping labels and invoices. The system also sends notifications to keep users informed about shipment status changes.
+The Bosta Tracking Shipping System is a web application that allows users to track and manage shipments in real-time. It provides a user-friendly interface.
 
 ## Technologies Used
 
