@@ -26,7 +26,7 @@
       "October": "أكتوبر",
       "November": "نوفمبر",
       "December": "ديسمبر",
-      "DELIVERED_TO_SENDER" : "عادت إلى الشاحن",
+      "DELIVERED_TO_SENDER" : "عادت إلى التاجر",
       "DELIVERED" : "تم تسليم الشحنه" , 
       "CANCELLED" : "تم الغاء الشحنه",
       "Unspecified" : "غير محدد",
