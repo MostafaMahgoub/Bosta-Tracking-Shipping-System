@@ -24,7 +24,7 @@ function ShippingProgress() {
                     ? "text-red-500"
                     : data.CurrentStatus.state === "DELIVERED"
                     ? "text-green-500"
-                    : ""
+                    : data.isEditableShipment === true ? "text-yellow-500" : ""
                 }`}
               >
                 {t(`${data.CurrentStatus.state}`)}
