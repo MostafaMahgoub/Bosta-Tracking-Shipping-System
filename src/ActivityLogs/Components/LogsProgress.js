@@ -3,7 +3,7 @@ import { Steps } from "antd";
 import LogsCard from "./LogsCard";
 import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
-
+import moment from 'moment';
 
 function LogsProgress() {
   const { formatDate, data , t } = useContext(AppContext);
@@ -18,10 +18,10 @@ function LogsProgress() {
   }, {});
 
   const items = Object.entries(transitEventsByDay)
-    .sort(([dateA], [dateB]) => new Date(dateB) - new Date(dateA))
+    .sort(([dateA], [dateB]) => moment(dateB, 'DD/MM/YYYY') - moment(dateA, 'DD/MM/YYYY'))
     .map(([date, events]) => {
       const formattedEvents = events
-        .sort((eventA, eventB) => new Date(eventB.timestamp) - new Date(eventA.timestamp))
+        .sort((eventA, eventB) => moment(eventB.timestamp, 'DD/MM/YYYY HH:mm:ss') - moment(eventA.timestamp, 'DD/MM/YYYY HH:mm:ss'))
         .map((event) => (
           <LogsCard key={event.timestamp} title={t(event.state)} time={`${formatDate(event.timestamp).time} ${t(formatDate(event.timestamp).meridiem)}`} />
         ));
@@ -43,5 +43,3 @@ function LogsProgress() {
 }
 
 export default LogsProgress;
-
-
