@@ -7,7 +7,6 @@
       "Last update" : "Last update",
       "Provider" : "Provider",
       "Promised date" : "Promised date" ,
-      "DELIVERED_TO_SENDER" : "Returned",
       "CANCELLED" : "CANCELED",
       "DELIVERED_TO_SENDER" : "Order returned back to the shipper",
       "OUT_FOR_DELIVERY" : "Order is out for delivery",
