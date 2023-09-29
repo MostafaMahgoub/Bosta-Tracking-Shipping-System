@@ -23,7 +23,7 @@ function LogsProgress() {
       const formattedEvents = events
         .sort((eventA, eventB) => new Date(eventB.timestamp) - new Date(eventA.timestamp))
         .map((event) => (
-          <LogsCard title={t(event.state)} time={`${formatDate(event.timestamp).time} ${t(formatDate(event.timestamp).meridiem)}`} />
+          <LogsCard key={event.timestamp} title={t(event.state)} time={`${formatDate(event.timestamp).time} ${t(formatDate(event.timestamp).meridiem)}`} />
         ));
       return {
         title: <span className="ActivityLogHeader">{date}</span>,

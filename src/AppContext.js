@@ -50,7 +50,6 @@ export const AppProvider = ({ children }) => {
       const response = await fetch(`https://tracking.bosta.co/shipments/track/${trackingNumber}`);
       const data = await response.json();
       setData(data);
-      console.log(data);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
