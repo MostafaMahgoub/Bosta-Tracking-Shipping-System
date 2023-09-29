@@ -1,13 +1,12 @@
-import React from 'react';
-import { Card, Divider, Empty } from 'antd';
-import ActiveTitle from './Components/ActiveTitle';
-import { useContext } from 'react';
-import { AppContext } from '../AppContext';
-import ProgressBar from './Components/ProgressBar';
+import React from "react";
+import { Card, Divider, Empty } from "antd";
+import ActiveTitle from "./Components/ActiveTitle";
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
+import ProgressBar from "./Components/ProgressBar";
 
 function ShippingProgress() {
-  const { data } = useContext(AppContext);
-  
+  const { data, t, formatDate } = useContext(AppContext);
 
   return (
     <Card className="my-10 w-80vw flex flex-col">
@@ -15,27 +14,50 @@ function ShippingProgress() {
         <>
           <div className="flex flex-col sm:flex-row items-start sm:items-center content-center justify-around">
             <div className="flex flex-col items-start content-center gap-0">
-              <ActiveTitle title={`Shipment No. ${data.TrackingNumber}`} />
-              <h4>{`${data.CurrentStatus.state}`}</h4>
+              <ActiveTitle
+                title={t(`Shipment No.`) + "  " + `${data.TrackingNumber}`}
+              />
+              <h4
+                className={`${
+                  data.CurrentStatus.state === "CANCELLED" ||
+                  data.CurrentStatus.state === "DELIVERED_TO_SENDER"
+                    ? "text-red-500"
+                    : data.CurrentStatus.state === "DELIVERED"
+                    ? "text-green-500"
+                    : ""
+                }`}
+              >
+                {t(`${data.CurrentStatus.state}`)}
+              </h4>
             </div>
             <div className="flex flex-col items-start content-center gap-0">
-              <ActiveTitle title={'Last update'} />
-              <h4>{`${data.CurrentStatus.state}`}</h4>
+              <ActiveTitle title={t("Last update")} />
+              <h4>{`${formatDate(data.CreateDate)}`}</h4>
             </div>
             <div className="flex flex-col items-start content-center gap-0">
-              <ActiveTitle title={'Provider'} />
-              <h4>{`${data.CurrentStatus.state}`}</h4>
+              <ActiveTitle title={t("Provider")} />
+              <h4>{`${data.provider}`}</h4>
             </div>
             <div className="flex flex-col items-start content-center gap-0">
-              <ActiveTitle title={'Promised date'} />
-              <h4>{`${data.CurrentStatus.state}`}</h4>
+              <ActiveTitle title={t("Promised date")} />
+              <h4>
+                {data.PromisedDate
+                  ? formatDate(data.PromisedDate)
+                  : t("Unspecified")}
+              </h4>
             </div>
           </div>
           <Divider />
           <ProgressBar />
         </>
       ) : (
-        <Empty description={<span className='font-bold text-lg'>No shipment data found. Please enter the tracking number.</span>} />
+        <Empty
+          description={
+            <span className="font-bold text-lg">
+              No shipment data found. Please enter the tracking number.
+            </span>
+          }
+        />
       )}
     </Card>
   );

@@ -2,5 +2,11 @@
     
       "Tracking shipments": "Tracking shipments",
       "Put Tracking No." : "Put Tracking No.",
-      "AR" : "AR"
+      "AR" : "AR",
+      "Shipment No." : "Shipment No.",
+      "Last update" : "Last update",
+      "Provider" : "Provider",
+      "Promised date" : "Promised date" ,
+      "DELIVERED_TO_SENDER" : "Returned"
+      
   }

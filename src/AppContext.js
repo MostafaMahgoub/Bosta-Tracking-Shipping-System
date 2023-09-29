@@ -17,6 +17,19 @@ export const AppProvider = ({ children }) => {
   const [trackingNumber, setTrackingNumber] = useState('');
   const [data, setData] = useState(null);
 
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+  
+    const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options);
+    const [weekday, day, month, year] = formattedDate.split(' ');
+    const formattedDateString = language === 'en' ? `${t(weekday)} ${t(day)} ${month} ${year}` : `${t(weekday)} ${month.replace(',', '')} ${t(day)} ${year}`;
+  
+    return formattedDateString;
+  }
+
+
   const toggleLanguage = (Lang) => {
     setLanguage(Lang);
   };
@@ -48,7 +61,8 @@ export const AppProvider = ({ children }) => {
     trackingNumber,
     setTrackingNumber,
     data,
-    t
+    t,
+    formatDate
   };
 
   return (
