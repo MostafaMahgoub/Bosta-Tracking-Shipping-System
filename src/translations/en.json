@@ -7,6 +7,15 @@
       "Last update" : "Last update",
       "Provider" : "Provider",
       "Promised date" : "Promised date" ,
-      "DELIVERED_TO_SENDER" : "Returned"
+      "DELIVERED_TO_SENDER" : "Returned",
+      "CANCELLED" : "CANCELED",
+      "DELIVERED_TO_SENDER" : "Order returned back to the shipper",
+      "OUT_FOR_DELIVERY" : "Order is out for delivery",
+      "NOT_YET_SHIPPED" : "Order is not yet shipped",
+      "PACKAGE_RECEIVED" : "Order received",
+      "IN_TRANSIT" : "Order is in transit" , 
+      "WAITING_FOR_CUSTOMER_ACTION" : "Order is waiting for customer action" , 
+      "TICKET_CREATED" : "Order created"
+
       
   }

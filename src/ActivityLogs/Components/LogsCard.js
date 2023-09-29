@@ -1,10 +1,10 @@
 import { Card } from "antd";
 
-function LogsCard() {
+function LogsCard({title,time}) {
   return (
     <Card className="m-4" bodyStyle={{ padding: "0.5rem 1rem"  }}>
-      <p className="text-[#111619] m-0">Order is returned back to the shipper</p>
-      <span className="text-[#667085]">3:52 PM</span>
+      <p className="text-[#111619] m-0">{title}</p>
+      <span className="text-[#667085]">{time}</span>
     </Card>
   );
 }

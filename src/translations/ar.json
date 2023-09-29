@@ -33,6 +33,15 @@
       "Your order is created" : "تم انشاء الشحنه",
       "Shipment received" : "تم استلام الشحنه",
       "Order is out for delivery" : "الشحنه خرجت للتسليم",
-      "Delivered" : "تم التسليم"
+      "Delivered" : "تم التسليم",
+      "Activity log" : "تفاصيل التتبع",
+      "OUT_FOR_DELIVERY" : "الطلب قيد التوصيل",
+      "NOT_YET_SHIPPED" : "الطلب لم يتم شحنه بعد",
+      "PACKAGE_RECEIVED" : "تم استلام الطلب",
+      "IN_TRANSIT" : "الطلب قيد النقل",
+      "WAITING_FOR_CUSTOMER_ACTION" : "الطلب في انتظار إجراء العميل",
+      "TICKET_CREATED" : "تم إنشاء الطلب",
+      "AM": "ص" ,
+      "PM" : "م"
       
   }

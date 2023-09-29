@@ -25,9 +25,20 @@ export const AppProvider = ({ children }) => {
     const formattedDate = date.toLocaleDateString('en-US', options);
     const [weekday, day, month, year] = formattedDate.split(' ');
     const formattedDateString = language === 'en' ? `${t(weekday)} ${t(day)} ${month} ${year}` : `${t(weekday)} ${month.replace(',', '')} ${t(day)} ${year}`;
+    
+    const formattedTime = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' }).replace(/(AM|PM)\b/, '');
+    const meridiem = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }).split(' ')[1];
+
+    const formattedDay = weekday;
   
-    return formattedDateString;
+    return {
+      date: formattedDateString,
+      time: formattedTime,
+      day : formattedDay,
+      meridiem : meridiem
+    };
   }
+  
 
 
   const toggleLanguage = (Lang) => {

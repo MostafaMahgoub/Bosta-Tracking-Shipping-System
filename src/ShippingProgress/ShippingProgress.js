@@ -32,7 +32,7 @@ function ShippingProgress() {
             </div>
             <div className="flex flex-col items-start content-center gap-0">
               <ActiveTitle title={t("Last update")} />
-              <h4>{`${formatDate(data.CreateDate)}`}</h4>
+              <h4>{`${formatDate(data.CreateDate).date}`}</h4>
             </div>
             <div className="flex flex-col items-start content-center gap-0">
               <ActiveTitle title={t("Provider")} />
@@ -42,7 +42,7 @@ function ShippingProgress() {
               <ActiveTitle title={t("Promised date")} />
               <h4>
                 {data.PromisedDate
-                  ? formatDate(data.PromisedDate)
+                  ? formatDate(data.PromisedDate).date
                   : t("Unspecified")}
               </h4>
             </div>
