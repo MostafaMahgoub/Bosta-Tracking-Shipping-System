@@ -54,6 +54,9 @@ span.anticon.anticon-check.ant-steps-finish-icon {
   background-color: #ff1616;
 }
 
+/* .ant-steps-item-icon {
+  @apply float-right !important;
+} */
 
 .rtl {
   direction: rtl;

@@ -1,6 +1,13 @@
 import React, { createContext, useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from './i18n';
+import styled from 'styled-components';
+
+const StyledSteps = styled.div.withConfig({ shouldForwardProp: prop => prop !== 'language' })`
+  .ant-steps-item-icon {
+    float: ${props => props.language === 'en' ? 'left' : 'right'} !important;
+  }
+`;
 
 export const AppContext = createContext();
 
@@ -30,6 +37,7 @@ export const AppProvider = ({ children }) => {
       fetchData();
     }
   }, [trackingNumber, fetchData]);
+
   useEffect(() => {
     i18n.changeLanguage(language);
   }, [language]);
@@ -45,7 +53,9 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider value={contextValue}>
-      {children}
+      <StyledSteps language={language}>
+        {children}
+      </StyledSteps>
     </AppContext.Provider>
   );
 };
