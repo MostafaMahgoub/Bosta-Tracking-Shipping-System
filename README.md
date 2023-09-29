@@ -39,6 +39,16 @@ The Bosta Tracking Shipping System is a web application that allows users to tra
 
 - `https://tracking.bosta.co/shipments/track/{trackingNumber}` (GET): Provides an endpoint that retrieve shipping information for a specific tracking number.
 
+## Testing
+
+To test the app, you can use the following tracking numbers:
+
+- Tracking Number 1: 7234258
+- Tracking Number 2: 13737343
+- Tracking Number 3: 67151313
+
+You can enter these tracking numbers in the app to simulate tracking and verify its functionality.
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
